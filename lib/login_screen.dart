@@ -9,26 +9,27 @@ class LoginScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16),
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Expanded(child: Text('')),
-            Icon(Icons.message, size: 75.0),
-            SizedBox(height: 20),
-            buildIntro(),
-            SizedBox(height: 10),
-            buildEmailInput(),
-            SizedBox(height: 10),
-            buildPasswordInput(),
-            SizedBox(height: 30),
-            buildLogin(context),
-            SizedBox(height: 10),
-            buildCreateAccount(context),
-            SizedBox(height: 30),
-            buildForgotPassword(),
-            SizedBox(height: 10),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              SizedBox(height: 200),
+              Icon(Icons.message, size: 75.0),
+              SizedBox(height: 20),
+              buildIntro(),
+              SizedBox(height: 10),
+              buildEmailInput(),
+              SizedBox(height: 10),
+              buildPasswordInput(),
+              SizedBox(height: 30),
+              buildLogin(context),
+              SizedBox(height: 10),
+              buildCreateAccount(context),
+              SizedBox(height: 30),
+              buildForgotPassword(),
+              SizedBox(height: 10),
+            ],
+          ),
         ),
       ),
     );
@@ -40,6 +41,7 @@ class LoginScreen extends StatelessWidget {
       child: Center(
         child: Text(
           'Log in with your phone number or Facebook account.',
+          textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w700,
